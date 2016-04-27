@@ -1,0 +1,149 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+body{
+    background: #2e2e61; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#1f295a, #553973); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1f295a, #553973); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1f295a, #553973); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#1f295a, #553973); /* Standard syntax */
+}
+
+#wrapper{
+	width: 94%;
+	height: 90%;
+	margin:3%;
+}
+
+h2{
+	font:48px/48px Helvetica Neue;
+	color:white;
+	width:275px;
+	margin:0 auto;
+	clear: both;
+}
+
+	h2 img{
+		width: 60px;
+		height: 60px;
+		vertical-align: text-bottom;
+	}
+
+.selection{
+	color:white;
+	font:20px/20px Helvetica Neue;
+	margin-top:-27px;
+}
+
+	.selection p{
+		color:rgba(255,255,255,0.975);
+	}
+
+	.selection >*{
+		float: left;
+	}
+
+	.selection#languages{
+		float: left;
+	}
+
+	.selection#trending{
+		float: right;
+	}
+
+#repos{
+	clear: both;
+	width: 100%;
+	height: 100%;
+	margin-top:10px;
+}
+
+.repo:nth-child(3n-2){
+	float:left;
+	}
+
+.repo:nth-child(3n-1){
+	margin: 2% 2% 0px;
+	}
+
+.repo:nth-child(3n){
+	float:right;
+	}
+
+	.repo{
+		float: left;
+		width: 30%;
+		height: 85px;
+		overflow: hidden;
+		padding:9px 1% 6px 1%;
+		font:20px/20px Helvetica Neue;
+		background: rgba(255,255,255,0.825);
+		margin-top:2%;
+	}
+
+	.repo h5{
+		float: left;
+		width: 85%;
+	}
+
+	.repo img{
+		float: right;
+		margin:4px 0px 0 0;
+		height: 15px;
+	}
+
+	.repo p{
+		font-size: 12px;
+		line-height: 15px;
+		clear: both;
+		height: 30px;
+		margin-top:27.5px;
+		overflow: hidden;
+	}
+
+	.repo span{
+		font-size: 11px;
+		font-weight: bold;
+		display: block;
+		margin-top: 5px;
+	}
+
+a{
+	color:inherit;
+	text-decoration:none;
+	background:red;
+	}
+
+select {
+   background: transparent;
+   min-width: 20px;
+   padding: 0px 5px;
+   font-size: 16px;
+   vertical-align:baseline;
+   border: 0;
+   border-radius: 0;
+   -webkit-appearance: none;
+   border-bottom:#eee 1px solid;
+   color:white;
+	 outline: none;
+   }
+
+	#langSelect{
+		width:29px;
+	}
+
+	#trendingSelect{
+		width:57px;
+	}
+
+	#width_tmp_select{
+		display: none;
+	}
