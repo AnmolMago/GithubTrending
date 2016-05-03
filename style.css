@@ -90,13 +90,14 @@ h2{
 	}
 
 	.repo h5{
+		font: 16px/16px Helvetica Neue;
 		float: left;
 		width: 85%;
 	}
 
 	.repo img{
 		float: right;
-		margin:4px 0px 0 0;
+		margin: 4px 0px 0px;
 		height: 15px;
 	}
 
@@ -105,7 +106,7 @@ h2{
 		line-height: 15px;
 		clear: both;
 		height: 30px;
-		margin-top:27.5px;
+		margin-top:30px;
 		overflow: hidden;
 	}
 
@@ -147,3 +148,7 @@ select {
 	#width_tmp_select{
 		display: none;
 	}
+
+@media max-width: {
+	
+}
