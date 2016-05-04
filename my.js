@@ -27,7 +27,8 @@ function printEm($json){
     if($desc == undefined){
       $desc = "No description available :(";
     }
-		$("#repos").append('<div class="repo"><a href="'+$item['repo']+'"><h5>'+$item['repo/_text']+'</h5><img class="star" src="star.png"><p>'+$desc+'</p><span>'+$stars+'</span></a></div>');
+	//<img class="star" src="star.png">
+	$("#repos").append('<div class="repo"><a href="'+$item['repo']+'"><h5>'+$item['repo/_text']+'</h5><p>'+$desc+'</p><span>'+$stars+'</span></a></div>');
 	};
 }
 

@@ -18,9 +18,10 @@ body{
 }
 
 #wrapper{
+	max-width:1600px;
 	width: 94%;
 	height: 90%;
-	margin:3%;
+	margin:3% auto;
 }
 
 h2{
@@ -66,48 +67,42 @@ h2{
 	margin-top:10px;
 }
 
-.repo:nth-child(3n-2){
-	float:left;
+.repo{
+	float: left;
+	overflow: hidden;
+	font:20px/20px Helvetica Neue;
+	background: rgba(255,255,255,0.825);
+}
+
+	.repo a {
+		display:block;
+		width: 100%;
+		height: 100%;
+		overflow:auto;
+		padding:9px;
 	}
 
-.repo:nth-child(3n-1){
-	margin: 2% 2% 0px;
-	}
-
-.repo:nth-child(3n){
-	float:right;
-	}
-
-	.repo{
-		float: left;
-		width: 30%;
-		height: 85px;
-		overflow: hidden;
-		padding:9px 1% 6px 1%;
-		font:20px/20px Helvetica Neue;
-		background: rgba(255,255,255,0.825);
-		margin-top:2%;
+	.repo a > * {
+		overflow:hidden;
 	}
 
 	.repo h5{
 		font: 16px/16px Helvetica Neue;
-		max-height:16px;
-		float: left;
+		height: 17px;
 		width: 85%;
+		font-weight:bold;
 	}
 
 	.repo img{
-		float: right;
 		margin: 4px 0px 0px;
 		height: 15px;
 	}
 
 	.repo p{
-		font-size: 12px;
-		line-height: 15px;
-		clear: both;
-		height: 30px;
-		margin-top:30px;
+		font: 12px/15px Helvetica Neue;
+		height: 45px;
+		width:95%;
+		margin-top:7px;
 		overflow: hidden;
 	}
 
@@ -115,13 +110,11 @@ h2{
 		font-size: 11px;
 		font-weight: bold;
 		display: block;
-		margin-top: 5px;
 	}
 
 a{
 	color:inherit;
 	text-decoration:none;
-	background:red;
 	}
 
 select {
@@ -149,3 +142,37 @@ select {
 	#width_tmp_select{
 		display: none;
 	}
+	
+	
+@media (min-width: 500px) {
+
+	.repo{
+		width: 32%;
+		height: 100px;
+		margin-top:2%;
+		}
+		
+	.repo a{
+		}
+		
+	.repo:nth-child(3n-2){
+		float:left;
+		}
+	
+	.repo:nth-child(3n-1){
+		margin: 2% 2% 0px;
+		}
+	
+	.repo:nth-child(3n){
+		float:right;
+		}
+
+}
+	
+@media (max-width: 640px){
+	.repo{
+		width:96%;
+		height: 100px;
+		margin: 2% 2% 0px;
+	}
+}
