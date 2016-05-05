@@ -58,6 +58,8 @@ h2{
 
 	.selection#trending{
 		float: right;
+		width:160px;
+		height:20px;
 	}
 
 #repos{
@@ -144,7 +146,7 @@ select {
 	}
 	
 	
-@media (min-width: 500px) {
+@media (min-width: 641px) {
 
 	.repo{
 		width: 32%;
@@ -168,11 +170,26 @@ select {
 		}
 
 }
-	
+
 @media (max-width: 640px){
-	.repo{
-		width:96%;
-		height: 100px;
-		margin: 2% 2% 0px;
+	
+	#repos{
+		margin-top:20px;
 	}
+	
+	.repo{
+		width:90%;
+		height: 100px;
+		margin: 2.25% 5% 0px;
+	}
+	
+	.repo:nth-last-child(-n+8) {
+		display: none;
+	}
+	
+	#trending.selection{
+		float:none;
+		margin:25px auto 0px;
+	}
+	
 }
