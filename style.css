@@ -6,7 +6,6 @@
 html{
 	height: 100%;
 	width: 100%;
-	overflow: hidden;
 }
 
 body{
@@ -15,6 +14,8 @@ body{
     background: -o-linear-gradient(#1f295a, #553973); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#1f295a, #553973); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#1f295a, #553973); /* Standard syntax */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #wrapper{
@@ -146,12 +147,21 @@ select {
 	}
 	
 	
-@media (min-width: 641px) {
+@media (min-width: 881px) {
+
+	html{
+		//overflow:hidden;
+	}
+
+	#repos{
+		max-height:630px;
+		margin-top:25px;
+	}
 
 	.repo{
 		width: 32%;
 		height: 100px;
-		margin-top:2%;
+		margin-bottom:2%;
 		}
 		
 	.repo a{
@@ -162,7 +172,7 @@ select {
 		}
 	
 	.repo:nth-child(3n-1){
-		margin: 2% 2% 0px;
+		margin: 0% 2% 2%;
 		}
 	
 	.repo:nth-child(3n){
@@ -170,7 +180,27 @@ select {
 		}
 
 }
-
+	
+@media (min-width: 641px) and (max-width: 880px){
+	.repo{
+		width: 49%;
+		height: 100px;
+		margin-top:1.5%;
+		}
+		
+	.repo a{
+		}
+		
+	.repo:nth-child(2n-1){
+		float:left;
+		}
+	
+	.repo:nth-child(2n){
+		float:right;
+		}
+		
+}
+	
 @media (max-width: 640px){
 	
 	#repos{
@@ -181,10 +211,6 @@ select {
 		width:90%;
 		height: 100px;
 		margin: 2.25% 5% 0px;
-	}
-	
-	.repo:nth-last-child(-n+8) {
-		display: none;
 	}
 	
 	#trending.selection{

@@ -11,6 +11,7 @@ $(document).ready(function(){
    $('select').change(function(){
       $("#width_tmp_option").html($(this).children('option:selected').text());
       $(this).width($("#width_tmp_select").width());
+	  $(this).parent().width($("#width_tmp_select").width() + 100);
    });
    $("#trendingSelect").change(function(){
      fetch($(this).val())
@@ -50,37 +51,3 @@ function fetch($timeframe) {
     fetchLive($timeframe);
   }
 }
-
-
-
-
-
-
-
-// function fetchLive($timeframe) {
-// $cacheKey = $timeframe + "Cache", $cacheTimeKey = $timeframe + "CacheTime";
-// 	$.getJSON( "https://api.import.io/store/connector/7db3ce02-2fcb-45c3-8f7a-40156c4301c6/_query?input=webpage/url:https%3A%2F%2Fgithub.com%2Ftrending?since="+$timeframe+"&&_apikey=906be87102c84aeabc7cdf0c3a113d0a478c0b7a9728d4cf98ee16c78b161b6da31cf3ce927173614c70a32a64804768319625a518c54cbfffaff2e75e2ca8ada9e32fc7a2c2ea7bdfbd704d6593882b", function( data ) {
-//     chrome.storage.local.set({$cacheKey: data, $cacheTimeKey: Date.now()}, function() {
-//         if (chrome.extension.lastError) {
-//             alert('An error occurred: ' + chrome.extension.lastError.message);
-//         }
-// 		  printEm(data);
-//     });
-//   });
-// }
-
-// function fetch($timeframe) {
-// $cacheKey = $timeframe + "Cache", cacheTimeKey = $timeframe + "CacheTime";
-//   chrome.storage.local.get([$cacheKey, cacheTimeKey], function(items) {
-//       if (new Date(items.cacheTimeKey).dayOfYear() === new Date(Date.now()).dayOfYear()) {
-//          printEm(items.cache); // Serialization is auto, so nested objects are no problem
-//          return;
-//       }else{
-//         console.log(items);
-//         alert(items.cacheTimeKey);
-//         alert(new Date(items.cacheTimeKey).dayOfYear());
-//         alert(new Date(Date.now()).dayOfYear());
-//       }
-//     fetchLive($timeframe);
-//   });
-// }
