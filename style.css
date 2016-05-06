@@ -22,14 +22,14 @@ body{
 	max-width:1600px;
 	width: 94%;
 	height: 90%;
-	margin:3% auto;
+	margin:2.5% auto;
 }
 
 h2{
 	font:48px/48px Helvetica Neue;
 	color:white;
-	width:275px;
-	margin:0 auto;
+	width:258px;
+	margin:30px auto 0px;
 	clear: both;
 }
 
@@ -66,8 +66,7 @@ h2{
 #repos{
 	clear: both;
 	width: 100%;
-	height: 100%;
-	margin-top:10px;
+	margin:10px auto;
 }
 
 .repo{
@@ -147,11 +146,7 @@ select {
 	}
 	
 	
-@media (min-width: 881px) {
-
-	html{
-		//overflow:hidden;
-	}
+@media (min-width: 1024px) {
 
 	#repos{
 		max-height:630px;
@@ -181,7 +176,12 @@ select {
 
 }
 	
-@media (min-width: 641px) and (max-width: 880px){
+@media (min-width: 641px) and (max-width: 1023px){
+
+	#repos{
+		margin-top:20px;
+	}
+	
 	.repo{
 		width: 49%;
 		height: 100px;
@@ -204,7 +204,7 @@ select {
 @media (max-width: 640px){
 	
 	#repos{
-		margin-top:20px;
+		margin-top:10px;
 	}
 	
 	.repo{
