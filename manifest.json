@@ -9,6 +9,7 @@
     "newtab": "index.html"
   },
   "permissions": [
-        "storage"
+        "storage",
+	"http://*.anmolmago.com/"
     ]
 }

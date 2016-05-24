@@ -145,6 +145,22 @@ select {
 		display: none;
 	}
 	
+#credit{
+	position:fixed;
+	color:#ccc;
+	width:90px;
+	height:16px;
+	padding:1px 3px;
+	border-radius:2px;
+	margin-left:50%;
+	left:-45px;
+	bottom:10px;
+	background:rgba(0,0,0,0.22);
+	}
+	
+	#credit a{
+		text-decoration:underline;
+		}
 	
 @media (min-width: 1024px) {
 
