@@ -22,11 +22,20 @@ $(document).ready(function() {
         $(this).parent().width($("#width_tmp_select").width() + 100);
     });
     $("#trendingSelect").change(function() {
+        $("#repos").css("opacity","0.5");
+        $("#loading").css("display","block");
         fetch($(this).val())
     });
+	$("#forceRefresh").click(function(){
+        $("#repos").css("opacity","0.5");
+        $("#loading").css("display","block");
+		fetchLive($("#trendingSelect").val());
+	});
 });
 
 function printEm($json) {
+    $("#repos").css("opacity","");
+    $("#loading").css("display","");
     $("#repos").empty();
     for ($i = 0; $i < 15; $i++) {
         $item = $json['results'][$i];
@@ -42,12 +51,10 @@ function printEm($json) {
 
 function fetchLive($timeframe) {
     $now = new Date();
-    $DayID = $now.getFullYear() + "-" + $now.getDOY();
-    $.getJSON("http://anmolmago.com/GithubTrending.php?timeframe=" + $timeframe + "&DayID=" + $DayID, function(data) {
-        if (data['results'].length == 0) {
-            //alert("Could not retrieve results. Github may be updating. Attempting to load results from cache.");
+    $.getJSON("http://anmolmago.com/GithubTrending.php?timeframe=" + $timeframe, function(data) {
+        if (!('results' in data) || data['results'].length == 0) {
             data = JSON.parse(localStorage.getItem($timeframe + "Cache"));
-            if (data['results'].length == 0) {
+            if (!('results' in data) || data['results'].length == 0) {
                 data = JSON.parse(localStorage.getItem("dailyCache"));
             }
         } else {

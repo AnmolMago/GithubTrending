@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
+	position:relative;
 }
 
 html{
@@ -21,15 +22,15 @@ body{
 #wrapper{
 	max-width:2000px;
 	width: 94%;
-	height: 90%;
-	margin:2.5% auto;
+	margin:0 auto;
+	overflow:auto;
 }
 
 h2{
 	font:48px/48px Helvetica Neue;
 	color:white;
 	width:258px;
-	margin:30px auto 0px;
+	margin:40px auto 0px;
 	clear: both;
 }
 
@@ -145,28 +146,48 @@ select {
 		display: none;
 	}
 	
-#credit{
+.extra{
 	position:fixed;
 	color:#ccc;
-	width:90px;
-	height:16px;
-	padding:1px 3px;
+	padding:2px 5px;
 	border-radius:2px;
-	margin-left:50%;
-	left:-45px;
-	bottom:10px;
-	background:rgba(0,0,0,0.22);
+	bottom:0px;
+	background:rgba(0,0,0,0.6669);
 	}
 	
-	#credit a{
+#credit{
+	width:90px;
+	height:16px;
+	right:0px;
+	background:rgba(0,0,0,0.25);
+	}
+	
+	#credit a, #forceRefresh{
 		text-decoration:underline;
 		}
+		
+#forceRefresh{
+	left:0 !important;
+	width: 78px;
+	height:16px;
+}
+
+#loading{
+	top:50%;
+	left:50%;
+	width:105px;
+	margin-left:-52.5px;
+	margin-top:-13px;
+	font: 24px/26px Roboto;
+	height:26px;
+	display:none;
+}
 	
 @media (min-width: 1024px) {
 
 	#repos{
 		max-height:630px;
-		margin-top:25px;
+		margin-top:30px;
 	}
 
 	.repo{
@@ -189,6 +210,10 @@ select {
 	.repo:nth-child(3n){
 		float:right;
 		}
+		
+	html, body{
+		overflow:hidden;
+	}
 
 }
 	
