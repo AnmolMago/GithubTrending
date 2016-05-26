@@ -1,4 +1,7 @@
 
 *.psd
+*.zip
 
 GithubTrending.php
+
+GithubTrending/*
