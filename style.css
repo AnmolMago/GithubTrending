@@ -1,8 +1,6 @@
-*{
-	margin: 0;
-	padding: 0;
-	position:relative;
-}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);
+
+*{margin: 0;	padding: 0;position:relative;}
 
 html{
 	height: 100%;
@@ -10,13 +8,7 @@ html{
 }
 
 body{
-    background: #2e2e61; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#1f295a, #553973); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#1f295a, #553973); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#1f295a, #553973); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#1f295a, #553973); /* Standard syntax */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: linear-gradient(#1f295a, #553973) no-repeat fixed;
 }
 
 #wrapper{
@@ -27,9 +19,9 @@ body{
 }
 
 h2{
-	font:48px/48px Helvetica Neue;
+	font:48px/48px Roboto;
 	color:white;
-	width:250px;
+	width:257px;
 	margin:40px auto 0px;
 	clear: both;
 	font-weight:300;
@@ -43,7 +35,7 @@ h2{
 
 .selection{
 	color:white;
-	font:20px/20px Helvetica Neue;
+	font:20px/20px Roboto;
 	margin-top:-27px;
 }
 
@@ -75,7 +67,7 @@ h2{
 .repo{
 	float: left;
 	overflow: hidden;
-	font:20px/20px Helvetica Neue;
+	font:20px/20px Roboto;
 	background: rgba(255,255,255,0.825);
 	color:#333;
 }
@@ -93,10 +85,10 @@ h2{
 	}
 
 	.repo h5{
-		font: 16px/16px Helvetica Neue;
+		font: 16px/16px Roboto;
 		height: 17px;
 		width: 85%;
-		font-weight:bold;
+		font-weight:700;
 	}
 
 	.repo img{
@@ -105,7 +97,7 @@ h2{
 	}
 
 	.repo p{
-		font: 12px/15px Helvetica Neue;
+		font: 12px/15px Roboto;
 		height: 45px;
 		width:95%;
 		margin-top:7px;
@@ -217,7 +209,7 @@ select {
 		}
 		
 	html, body{
-		overflow:hidden;
+		overflow:auto;
 	}
 
 }
