@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Github Trending",
+  "author": "Anmol Mago",
+  "description": "This unofficial extention shows the top trending github repos as provided by http://github.com/trending",
+  "incognito": "split",
+  "version": "1.0.1",
+
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+  "permissions": [
+        "storage",
+        "http://*.anmolmago.com/"
+    ]
+}

@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>New tab</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="jquery.js" defer></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<h2><img src="logo.png"/> Trending</h2>
+			
+			<!--<div class="selection" id="languages">
+				<p>Languages:&nbsp;</p>
+				<select id="langSelect">
+					<option>All</option>
+					<option>English</option>
+					<option>All</option>
+				</select>
+			</div>-->
+			<div class="selection" id="trending">
+				<p>Trending:&nbsp;</p>
+				<select id="trendingSelect" >
+					<option value="daily">Today</option>
+					<option value="weekly">This week</option>
+					<option value="monthly">This month</option>
+				</select>
+				<select id="width_tmp_select">
+				 <option id="width_tmp_option"></option>
+				</select>
+			</div>
+			<div id="repos">
+				<div class="repo"></div><div class="repo"></div><div class="repo"></div><div class="repo"></div><div class="repo"></div><div class="repo"></div><div class="repo"></div><div class="repo"></div><div class="repo"></div><div class="repo"></div><div class="repo"></div><div class="repo"></div><div class="repo"></div><div class="repo"></div><div class="repo"></div>
+			</div>
+		</div>
+        <div class="extra" id="credit">By: <a href="http://anmolmago.com/external/GithubTrending">Anmol Mago</a></div>
+        <div class="extra" id="loading">Loading...</div>
+        <div class="extra" id="forceRefresh">Force Refresh!</div>
+	</body>
+</html>
+<script type="text/javascript" src="my.js" defer></script>

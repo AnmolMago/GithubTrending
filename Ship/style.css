@@ -1,0 +1,259 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);
+
+*{margin: 0;	padding: 0;position:relative;}
+
+html{
+	height: 100%;
+	width: 100%;
+}
+
+body{
+    background: linear-gradient(#1f295a, #553973) no-repeat fixed;
+}
+
+#wrapper{
+	max-width:2000px;
+	width: 94%;
+	margin:0 auto;
+	overflow:auto;
+}
+
+h2{
+	font:48px/48px Roboto;
+	color:white;
+	width:257px;
+	margin:40px auto 0px;
+	clear: both;
+	font-weight:300;
+}
+
+	h2 img{
+		width: 60px;
+		height: 60px;
+		vertical-align: text-bottom;
+	}
+
+.selection{
+	color:white;
+	font:20px/20px Roboto;
+	margin-top:-27px;
+}
+
+	.selection p{
+		color:rgba(255,255,255,0.975);
+	}
+
+	.selection > *{
+		float: left;
+		font-weight:200;
+	}
+
+	.selection#languages{
+		float: left;
+	}
+
+	.selection#trending{
+		float: right;
+		width:160px;
+		height:20px;
+	}
+
+#repos{
+	clear: both;
+	width: 100%;
+	margin:10px auto;
+}
+
+.repo{
+	float: left;
+	overflow: hidden;
+	font:20px/20px Roboto;
+	background: rgba(255,255,255,0.825);
+	color:#333;
+}
+
+	.repo a {
+		display:block;
+		width: 100%;
+		height: 100%;
+		overflow:auto;
+		padding:9px;
+	}
+
+	.repo a > * {
+		overflow:hidden;
+	}
+
+	.repo h5{
+		font: 16px/16px Roboto;
+		height: 17px;
+		width: 85%;
+		font-weight:700;
+	}
+
+	.repo img{
+		margin: 4px 0px 0px;
+		height: 15px;
+	}
+
+	.repo p{
+		font: 12px/15px Roboto;
+		height: 45px;
+		width:95%;
+		margin-top:7px;
+		overflow: hidden;
+		font-weight:400;
+	}
+
+	.repo span{
+		font-size: 11px;
+		font-weight: bold;
+		display: block;
+		color:#555;
+	}
+
+a{
+	color:inherit;
+	text-decoration:none;
+	}
+
+select {
+   background: transparent;
+   min-width: 20px;
+   padding: 0px 5px;
+   font-size: 16px;
+   vertical-align:baseline;
+   border: 0;
+   border-radius: 0;
+   -webkit-appearance: none;
+   border-bottom:#eee 1px solid;
+   color:white;
+	 outline: none;
+   }
+
+	#langSelect{
+		width:29px;
+	}
+
+	#trendingSelect{
+		width:57px;
+	}
+
+	#width_tmp_select{
+		display: none;
+	}
+	
+.extra{
+	position:fixed;
+	color:#ccc;
+	padding:2px 5px;
+	border-radius:2px;
+	bottom:0px;
+	background:rgba(0,0,0,0.6669);
+	}
+	
+#credit{
+	width:90px;
+	height:16px;
+	right:0px;
+	background:rgba(0,0,0,0.25);
+	}
+	
+	#credit a, #forceRefresh{
+		text-decoration:underline;
+		}
+		
+#forceRefresh{
+	left:0 !important;
+	width: 78px;
+	height:16px;
+}
+
+#loading{
+	top:50%;
+	left:50%;
+	width:105px;
+	margin-left:-52.5px;
+	margin-top:-13px;
+	font: 24px/26px Roboto;
+	height:26px;
+	display:none;
+}
+	
+@media (min-width: 1024px) {
+
+	#repos{
+		max-height:630px;
+		margin-top:30px;
+	}
+
+	.repo{
+		width: 32%;
+		height: 100px;
+		margin-bottom:2%;
+		}
+		
+	.repo a{
+		}
+		
+	.repo:nth-child(3n-2){
+		float:left;
+		}
+	
+	.repo:nth-child(3n-1){
+		margin: 0% 2% 2%;
+		}
+	
+	.repo:nth-child(3n){
+		float:right;
+		}
+		
+	html, body{
+		overflow:auto;
+	}
+
+}
+	
+@media (min-width: 641px) and (max-width: 1023px){
+
+	#repos{
+		margin-top:20px;
+	}
+	
+	.repo{
+		width: 49%;
+		height: 100px;
+		margin-top:1.5%;
+		}
+		
+	.repo a{
+		}
+		
+	.repo:nth-child(2n-1){
+		float:left;
+		}
+	
+	.repo:nth-child(2n){
+		float:right;
+		}
+		
+}
+	
+@media (max-width: 640px){
+	
+	#repos{
+		margin-top:10px;
+	}
+	
+	.repo{
+		width:90%;
+		height: 100px;
+		margin: 2.25% 5% 0px;
+	}
+	
+	#trending.selection{
+		float:none;
+		margin:25px auto 0px;
+	}
+	
+}
