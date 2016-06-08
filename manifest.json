@@ -1,15 +1,22 @@
 {
   "manifest_version": 2,
 
-  "name": "Github Trending",
+  "name": "Github Trending New Tab",
   "author": "Anmol Mago",
   "description": "This unofficial extention shows the top trending github repos as provided by http://github.com/trending",
   "incognito": "split",
-  "version": "1.0.0",
+  "version": "1.0.3",
+    
+  "icons": { 
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+  },
 
   "chrome_url_overrides" : {
     "newtab": "index.html"
   },
+    
   "permissions": [
         "storage",
         "http://*.anmolmago.com/"

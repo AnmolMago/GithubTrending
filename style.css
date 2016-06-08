@@ -138,6 +138,10 @@ select {
 	#trendingSelect{
 		width:57px;
 	}
+	
+	#trendingSelect, #forceRefresh{
+		cursor:pointer;
+		}
 
 	#width_tmp_select{
 		display: none;
