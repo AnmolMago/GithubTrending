@@ -1,7 +1,5 @@
-
+.gitignore
 *.psd
 *.zip
 
 GithubTrending.php
-
-Ship/*
