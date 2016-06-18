@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);
 
-*{margin: 0;	padding: 0;position:relative;}
+*{margin: 0;padding: 0;position:relative;outline:none;}
 
 html{
 	height: 100%;
@@ -54,7 +54,6 @@ h2{
 
 	.selection#trending{
 		float: right;
-		width:160px;
 		height:20px;
 	}
 
@@ -120,7 +119,7 @@ a{
 select {
    background: transparent;
    min-width: 20px;
-   padding: 0px 5px;
+   padding: 0px 5px 2px;
    font-size: 16px;
    vertical-align:baseline;
    border: 0;
@@ -128,7 +127,7 @@ select {
    -webkit-appearance: none;
    border-bottom:#eee 1px solid;
    color:white;
-	 outline: none;
+   outline: none;
    }
 
 	#langSelect{
@@ -136,7 +135,11 @@ select {
 	}
 
 	#trendingSelect{
-		width:57px;
+		width:67px;
+	}
+
+	.fakeArrow{
+		margin:0px;
 	}
 	
 	#trendingSelect, #forceRefresh{
@@ -182,6 +185,10 @@ select {
 	font: 24px/26px Roboto;
 	height:26px;
 	display:none;
+}
+
+input::-webkit-calendar-picker-indicator {
+	opacity: 100;
 }
 	
 @media (min-width: 1024px) {

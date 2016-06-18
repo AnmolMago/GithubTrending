@@ -1,21 +1,22 @@
 <html>
 	<head>
 		<title>New tab</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<script type="text/javascript" src="jquery.js" defer></script>
+		<link rel="stylesheet" type="text/css" href="assets/style.css">
+		<link rel="stylesheet" type="text/css" href="assets/select2.min.css">
+		<script type="text/javascript" src="assets/jquery.js" defer></script>
+		<script type="text/javascript" src="assets/select2.min.js" defer></script>
+		<script type="text/javascript" src="assets/my.js" defer></script>
 	</head>
 	<body>
 		<div id="wrapper">
 			<h2><img src="logo.png"/> Trending</h2>
 			
-			<!--<div class="selection" id="languages">
+			<div class="selection" id="languages">
 				<p>Languages:&nbsp;</p>
 				<select id="langSelect">
 					<option>All</option>
-					<option>English</option>
-					<option>All</option>
 				</select>
-			</div>-->
+			</div>
 			<div class="selection" id="trending">
 				<p>Trending:&nbsp;</p>
 				<select id="trendingSelect" >
@@ -23,6 +24,7 @@
 					<option value="weekly">This week</option>
 					<option value="monthly">This month</option>
 				</select>
+				<b class="fakeArrow"></b>
 				<select id="width_tmp_select">
 				 <option id="width_tmp_option"></option>
 				</select>
@@ -36,4 +38,3 @@
         <div class="extra" id="forceRefresh">Force Refresh!</div>
 	</body>
 </html>
-<script type="text/javascript" src="my.js" defer></script>
