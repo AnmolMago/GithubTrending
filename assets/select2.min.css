@@ -95,7 +95,7 @@
     border-top: none;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    min-width: 50px;
+    min-width: 155px;
 }
 .select2-search--dropdown {
     display: block;
@@ -175,8 +175,8 @@
     border-width: 5px 4px 0 4px;
     height: 0;
     left: 50%;
-    margin-left: -4px;
     margin-top: -7px;
+    margin-right: -3px;
     position: absolute;
     top: 13px;
     width: 0;

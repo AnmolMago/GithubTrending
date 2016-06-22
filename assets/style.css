@@ -176,6 +176,13 @@ select {
 	height:16px;
 }
 
+#newFeatures{
+	margin-left: 50%;
+	left:-65px;
+	height:16px;
+	background:rgba(0,0,0,0.25);
+}
+
 #loading{
 	top:50%;
 	left:50%;
@@ -225,7 +232,7 @@ input::-webkit-calendar-picker-indicator {
 
 }
 	
-@media (min-width: 641px) and (max-width: 1023px){
+@media (min-width: 711px) and (max-width: 1023px){
 
 	#repos{
 		margin-top:20px;
@@ -237,9 +244,6 @@ input::-webkit-calendar-picker-indicator {
 		margin-top:1.5%;
 		}
 		
-	.repo a{
-		}
-		
 	.repo:nth-child(2n-1){
 		float:left;
 		}
@@ -247,10 +251,23 @@ input::-webkit-calendar-picker-indicator {
 	.repo:nth-child(2n){
 		float:right;
 		}
+	
+	.selection#languages{
+		width: calc(50% - 150px);
+	}
+
+	.select2-container {
+		width: calc(100% - 107px) !important;
+	}
+
+	.select2-container--default .select2-selection--single {
+		max-width: 100%;
+		background: rebeccapurple;
+	}
 		
 }
 	
-@media (max-width: 640px){
+@media (max-width: 710px){
 	
 	#repos{
 		margin-top:10px;
@@ -262,9 +279,33 @@ input::-webkit-calendar-picker-indicator {
 		margin: 2.25% 5% 0px;
 	}
 	
-	#trending.selection{
-		float:none;
-		margin:25px auto 0px;
+	.selection{
+		margin-top:25px;
+		font-size: 17px;
+	}
+
+		.selection#trending{
+			margin-right: calc();
+		}
+
+		.selection#languages{
+			margin-left: 5%;
+		}
+	
+	.selection#languages{
+		width: calc(48%);
+	}
+
+	.fakeArrow {
+		margin-right: 13px !important;
+	}
+
+	.select2-container {
+		width: calc(100% - 100px) !important;
+	}
+
+	.select2-container--default .select2-selection--single {
+		max-width: 100%;
 	}
 	
 }

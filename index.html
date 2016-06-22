@@ -2,7 +2,7 @@
 	<head>
 		<title>New tab</title>
 		<link rel="stylesheet" type="text/css" href="assets/style.css">
-		<link rel="stylesheet" type="text/css" href="assets/select2.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/select2.min.css" defer>
 		<script type="text/javascript" src="assets/jquery.js" defer></script>
 		<script type="text/javascript" src="assets/select2.min.js" defer></script>
 		<script type="text/javascript" src="assets/my.js" defer></script>
@@ -13,9 +13,7 @@
 			
 			<div class="selection" id="languages">
 				<p>Languages:&nbsp;</p>
-				<select id="langSelect">
-					<option>All</option>
-				</select>
+				<select id="langSelect"></select>
 			</div>
 			<div class="selection" id="trending">
 				<p>Trending:&nbsp;</p>
@@ -35,6 +33,7 @@
 		</div>
         <div class="extra" id="credit">By: <a href="http://anmolmago.com/external/GithubTrending">Anmol Mago</a></div>
         <div class="extra" id="loading">Loading...</div>
+        <div class="extra" id="newFeatures"><a href="http://anmolmago.com/redirect.php?to=GTIssues">Issues/New Features!</a></div>
         <div class="extra" id="forceRefresh">Force Refresh!</div>
 	</body>
 </html>
