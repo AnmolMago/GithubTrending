@@ -45,7 +45,7 @@ function printEm($json) {
     $("#repos").css("opacity", "");
     $("#loading").css("display", "");
     $("#repos").empty();
-    for ($i = 0; $i < 15; $i++) {
+    for ($i = 0; $i < $json['results'].length; $i++) {
         $item = $json['results'][$i];
         $stars = $item['stars'].replace(" Built by", "").replace(" \u2022", "");
         $desc = $item['description'];
