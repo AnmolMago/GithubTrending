@@ -36,18 +36,23 @@ $(document).ready(function () {
     });
     fetch(false);
     $('#langSelect').select2();
+    $ugly = setInterval(function(){ onResize(); }, 10);
+    setTimeout(function(){ clearInterval($ugly) }, 100);
     $( window ).resize(function() {
-        if($(this).width() > 711){
-            $current = $(this).height() - 130 - 25;
-            // if($(this).width() < 710){ $current = $(this).height() - 130 - 65;}
-            $margin = parseFloat($(".repo").css("margin-bottom")) + parseFloat($(".repo").css("margin-top"));
-            $one = $(".repo").height() + $margin;
-            console.log("one:"+$one)
-            $boxes = Math.floor(($current + $margin + 5)/$one);
-            $("#repos").height($boxes * $one - 10)
-        }
+        onResize();
     });
 });
+
+function onResize() {
+    if($(this).width() > 711){
+        $current = $(this).height() - 130 - 25;
+        // if($(this).width() < 710){ $current = $(this).height() - 130 - 65;}
+        $margin = parseFloat($(".repo").css("margin-bottom"));
+        $one = $(".repo").height() + $margin;
+        $boxes = Math.floor(($current + $margin - 10)/$one);
+        $("#repos").height($boxes * $one - 10)
+    }
+}
 
 function printEm($json) {
     $("#repos").css("opacity", "");

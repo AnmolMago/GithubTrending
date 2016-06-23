@@ -5,7 +5,7 @@
   "author": "Anmol Mago",
   "description": "This unofficial extention shows the top trending github repos as provided by http://github.com/trending",
   "incognito": "split",
-  "version": "1.2",
+  "version": "1.2.1",
     
   "icons": { 
       "16": "assets/images/icon16.png",
