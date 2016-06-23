@@ -12,6 +12,10 @@ option {
 	background: #ccc;
 }
 
+::-webkit-scrollbar{
+	width:0px;
+}
+
 body{
     background: linear-gradient(#1f295a, #553973) no-repeat fixed;
 }
@@ -66,8 +70,9 @@ h2{
 	clear: both;
 	width: 100%;
 	margin:10px auto;
-	height: calc(100% - 130px - 15px);
-	overflow: scroll;
+	height: calc(100% - 130px - 25px);
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .repo{
@@ -242,13 +247,13 @@ input::-webkit-calendar-picker-indicator {
 @media (min-width: 711px) and (max-width: 1023px){
 
 	#repos{
-		margin-top:20px;
+		margin-top:30px;
 	}
 	
 	.repo{
 		width: 49%;
 		height: 100px;
-		margin-top:1.5%;
+		margin-bottom:1.5%;
 		}
 		
 	.repo:nth-child(2n-1){
@@ -277,14 +282,14 @@ input::-webkit-calendar-picker-indicator {
 @media (max-width: 710px){
 	
 	#repos{
-		margin-top:10px;
-		height: calc(100% - 130px - 35px);
+		margin-top:65px;
+		height: calc(100% - 130px - 65px);
 	}
 	
 	.repo{
 		width:90%;
 		height: 100px;
-		margin: 2.25% 5% 0px;
+		margin: 0px 5% 2.25%;
 	}
 	
 	.selection{
