@@ -7,6 +7,11 @@ html{
 	width: 100%;
 }
 
+option {
+	color:black;
+	background: #ccc;
+}
+
 body{
     background: linear-gradient(#1f295a, #553973) no-repeat fixed;
 }
@@ -61,18 +66,8 @@ h2{
 	clear: both;
 	width: 100%;
 	margin:10px auto;
-	height: calc(100% - 130px - 50px);
+	height: calc(100% - 130px - 15px);
 	overflow: scroll;
-}
-
-
-#repos::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
-}
-/* optional: show position indicator in red */
-#repos::-webkit-scrollbar-thumb {
-    background: #FF0000;
 }
 
 .repo{
@@ -169,6 +164,7 @@ select {
 	border-radius:2px;
 	bottom:0px;
 	background:rgba(0,0,0,0.6669);
+	font:12px/14px Roboto;
 	}
 	
 #credit{
@@ -219,7 +215,7 @@ input::-webkit-calendar-picker-indicator {
 	.repo{
 		width: 32%;
 		height: 100px;
-		margin-bottom:2%;
+		margin-bottom:1.5%;
 		}
 		
 	.repo a{
@@ -230,7 +226,7 @@ input::-webkit-calendar-picker-indicator {
 		}
 	
 	.repo:nth-child(3n-1){
-		margin: 0% 2% 2%;
+		margin: 0% 2% 1.5%;
 		}
 	
 	.repo:nth-child(3n){
@@ -282,6 +278,7 @@ input::-webkit-calendar-picker-indicator {
 	
 	#repos{
 		margin-top:10px;
+		height: calc(100% - 130px - 35px);
 	}
 	
 	.repo{

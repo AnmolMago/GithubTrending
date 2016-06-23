@@ -36,9 +36,10 @@ $(document).ready(function () {
     });
     fetch(false);
     $('#langSelect').select2();
-    $( window ).resize(function() {
-        
-    });
+	if (navigator.appVersion.indexOf("Win")!=-1) {
+		$("#repos::-webkit-scrollbar").css("width", "5px").css("background", "transparent");
+		$("#repos::-webkit-scrollbar").css("background", "#ccc").css("border", "1px #cecce8 solid").css("border-radius", "5px");
+	}
 });
 
 function printEm($json) {
@@ -47,12 +48,17 @@ function printEm($json) {
     $("#repos").empty();
     for ($i = 0; $i < $json['results'].length; $i++) {
         $item = $json['results'][$i];
-        $stars = $item['stars'].replace(" Built by", "").replace(" \u2022", "");
+		$starSplit = $item['stars'].split(" \u2022");
+		if ($starSplit.length >= 3){
+       		$item['stars'] = $starSplit[0] +" \u2022"+ $starSplit[1];
+		}else{
+       		$item['stars'] = $starSplit[0];
+		}
         $desc = $item['description'];
         if ($desc == undefined) {
             $desc = "No description available :(";
         }
-        $("#repos").append('<div class="repo"><a href="' + escapeHtml($item['repo']) + '"><h5>' + escapeHtml($item['repo/_text']) + '</h5><p>' + escapeHtml($desc) + '</p><span>' + escapeHtml($stars) + '</span></a></div>');
+        $("#repos").append('<div class="repo"><a href="' + escapeHtml($item['repo']) + '"><h5>' + escapeHtml($item['repo/_text']) + '</h5><p>' + escapeHtml($desc) + '</p><span>' + escapeHtml($item['stars']) + '</span></a></div>');
     };
 }
 
@@ -65,7 +71,7 @@ function fetchLive($loading) {
     $lang = $("#langSelect").val();
     $id = $lang + "-" + $timeframe; 
     $now = new Date();
-    $.getJSON("http://anmolmago.com/GithubTrending2.php?timeframe=" + $timeframe + "&language=" + $lang, function (data) {
+    $.getJSON("http://anmolmago.com/GithubTrending.php?timeframe=" + $timeframe + "&language=" + $lang, function (data) {
         if (!('results' in data) || data['results'].length === 0) {
             data = JSON.parse(localStorage.getItem($id + "Cache"));
             if (!('results' in data) || data['results'].length === 0) {
