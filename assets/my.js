@@ -53,7 +53,6 @@ function loadDefault() {
     var savedLang = localStorage.getItem("savedLanguage");
     if (savedLang) {
         console.log("loading default " + savedLang);
-        $('option:contains("' + savedLang + '")').attr("selected", "selected");
         $('#langSelect').val(savedLang);
     }
 }
