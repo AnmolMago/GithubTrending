@@ -45,14 +45,12 @@ $(document).ready(function () {
 });
 
 function setDefault() {
-    console.log("new default as " + $("#langSelect").val());
     localStorage.setItem("savedLanguage", $("#langSelect").val());
 }
 
 function loadDefault() {
     var savedLang = localStorage.getItem("savedLanguage");
     if (savedLang) {
-        console.log("loading default " + savedLang);
         $('#langSelect').val(savedLang);
     }
 }
