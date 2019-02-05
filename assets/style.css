@@ -101,6 +101,9 @@ h2{
 		height: 17px;
 		width: 85%;
 		font-weight:700;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 
 	.repo img{
@@ -115,6 +118,9 @@ h2{
 		margin-top:7px;
 		overflow: hidden;
 		font-weight:400;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;  
 	}
 
 	.repo span{
