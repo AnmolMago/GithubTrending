@@ -27,13 +27,14 @@ $(document).ready(function () {
         fetch(true);
     });
     $("#forceRefresh").click(function () { fetchLive(true); });
-    $("#langSelect").change(function () { fetch(true); });
+    $("#langSelect").change(function () { setDefault(); fetch(true); });
     languages.forEach(function (lang) {
         $('#langSelect').append($('<option>', {
             value: lang.replace(new RegExp(" ", 'g'), "-").toLowerCase(),
             text: lang
         }));
     });
+    loadDefault();
     fetch(false);
     $('#langSelect').select2();
     $ugly = setInterval(function(){ onResize(); }, 10);
@@ -42,6 +43,17 @@ $(document).ready(function () {
         onResize();
     });
 });
+
+function setDefault() {
+    localStorage.setItem("savedLanguage", $("#langSelect").val());
+}
+
+function loadDefault() {
+    var savedLang = localStorage.getItem("savedLanguage");
+    if (savedLang) {
+        $('#langSelect').val(savedLang);
+    }
+}
 
 function onResize() {
     if($(this).width() > 711){
